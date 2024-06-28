@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
+import openSeaSwimmers from "../../public/images/open-sea-swimmers.jpg";
+import bicycleRace from "../../public/images/bicycle-race.jpg";
+import marathonRunners from "../../public/images/marathon-runners.jpg";
 
 const Index = () => {
   return (
@@ -28,6 +31,11 @@ const Index = () => {
                 <p>
                   Our triathlon event includes swimming, cycling, and running segments. Participants of all levels are welcome.
                 </p>
+                <div className="flex space-x-4 mt-4">
+                  <img src={openSeaSwimmers} alt="Open Sea Swimmers" className="w-1/3 rounded-lg" />
+                  <img src={bicycleRace} alt="Bicycle Race" className="w-1/3 rounded-lg" />
+                  <img src={marathonRunners} alt="Marathon Runners" className="w-1/3 rounded-lg" />
+                </div>
               </CardContent>
             </Card>
           </TabsContent>
