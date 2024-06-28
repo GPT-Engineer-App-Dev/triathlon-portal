@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
-import openSeaSwimmers from "@/public/images/open-sea-swimmers.jpg";
-import bicycleRace from "@/public/images/bicycle-race.jpg";
-import marathonRunners from "@/public/images/marathon-runners.jpg";
+import openSeaSwimmers from "../../public/images/open-sea-swimmers.jpg";
+import bicycleRace from "../../public/images/bicycle-race.jpg";
+import marathonRunners from "../../public/images/marathon-runners.jpg";
 
 const Index = () => {
   return (
