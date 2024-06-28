@@ -1,15 +1,70 @@
-// Update this page (the content is just a fallback if you fail and example)
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Separator } from "@/components/ui/separator";
 
 const Index = () => {
   return (
-    <div className="h-screen w-screen flex items-center justify-center">
-      {/* Update with components here - default to put new layout sections as separate components in the components folder, and import them here */}
-      <div>
-        <h1 className="text-3xl text-center">Your Blank Canvas</h1>
-        <p className="text-center">
-          Chat with the agent to start making edits.
-        </p>
-      </div>
+    <div className="min-h-screen bg-gray-100 p-4">
+      <header className="text-center py-10">
+        <h1 className="text-5xl font-bold mb-4">Triathlon Event</h1>
+        <p className="text-xl text-gray-700">Join us for an unforgettable experience</p>
+        <Button className="mt-4" variant="primary">Register Now</Button>
+      </header>
+      <main className="max-w-4xl mx-auto">
+        <Tabs defaultValue="overview">
+          <TabsList className="flex justify-center mb-4">
+            <TabsTrigger value="overview">Overview</TabsTrigger>
+            <TabsTrigger value="schedule">Schedule</TabsTrigger>
+            <TabsTrigger value="location">Location</TabsTrigger>
+          </TabsList>
+          <TabsContent value="overview">
+            <Card>
+              <CardHeader>
+                <CardTitle>Event Overview</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  Our triathlon event includes swimming, cycling, and running segments. Participants of all levels are welcome.
+                </p>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="schedule">
+            <Card>
+              <CardHeader>
+                <CardTitle>Event Schedule</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul>
+                  <li>8:00 AM - Registration</li>
+                  <li>9:00 AM - Swimming Start</li>
+                  <li>10:00 AM - Cycling Start</li>
+                  <li>12:00 PM - Running Start</li>
+                  <li>2:00 PM - Award Ceremony</li>
+                </ul>
+              </CardContent>
+            </Card>
+          </TabsContent>
+          <TabsContent value="location">
+            <Card>
+              <CardHeader>
+                <CardTitle>Event Location</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>
+                  The event will take place at the beautiful Lakeview Park. Address: 123 Lakeview Drive, Triathlon City.
+                </p>
+              </CardContent>
+            </Card>
+          </TabsContent>
+        </Tabs>
+      </main>
+      <Separator className="my-10" />
+      <footer className="text-center text-gray-600">
+        <p>&copy; 2023 Triathlon Event. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
